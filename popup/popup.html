@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>AI Form Filler</h1>
+      <button id="settingsBtn" title="Settings">⚙</button>
+    </header>
+
+    <div id="noKey" class="banner hidden">
+      Gemini key is not set. <a href="#" id="openOptions">Set key</a>
+    </div>
+
+    <label for="prompt">Describe the form data:</label>
+    <textarea
+      id="prompt"
+      rows="6"
+      dir="auto"
+      placeholder="Write your info in natural language, e.g.: first and last name, address, city, phone number, email, and any data the form needs."
+    ></textarea>
+
+    <button id="fillBtn" class="primary">Fill form</button>
+
+    <div id="status" class="status"></div>
+
+    <details id="codeBox" class="hidden">
+      <summary>Code that ran</summary>
+      <pre id="codeOut"></pre>
+    </details>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

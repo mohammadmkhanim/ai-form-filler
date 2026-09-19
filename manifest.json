@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "AI Form Filler (Gemini)",
+  "version": "1.0.0",
+  "description": "Fill the current page's form from a natural-language description, using Gemini.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://generativelanguage.googleapis.com/*"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "AI Form Filler",
+    "default_icon": "icons/icon.png"
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "128": "icons/icon.png"
+  }
+}

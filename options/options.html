@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Settings — AI Form Filler</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        max-width: 520px;
+        margin: 40px auto;
+        padding: 0 16px;
+        color: #1f2330;
+      }
+      h1 { font-size: 18px; }
+      label { display: block; margin: 16px 0 6px; font-size: 13px; color: #555; }
+      input, select {
+        width: 100%;
+        padding: 9px;
+        border: 1px solid #ccd0da;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+      button {
+        margin-top: 18px;
+        padding: 10px 18px;
+        background: #4f46e5;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .hint { font-size: 12px; color: #777; margin-top: 6px; }
+      .hint a { color: #4f46e5; }
+      #saved { color: #158a4b; font-size: 13px; margin-left: 10px; }
+    </style>
+  </head>
+  <body>
+    <h1>AI Form Filler — Settings</h1>
+
+    <label for="apiKey">Gemini API key</label>
+    <input type="password" id="apiKey" placeholder="AIza..." />
+    <div class="hint">
+      Get a key from
+      <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>.
+      The key is stored only in this browser.
+    </div>
+
+    <label for="model">Model</label>
+    <select id="model">
+      <option value="gemini-2.5-flash">gemini-2.5-flash (fast, recommended)</option>
+      <option value="gemini-2.5-flash-lite">gemini-2.5-flash-lite (lighter/cheaper)</option>
+      <option value="gemini-flash-latest">gemini-flash-latest (newest — sometimes busy)</option>
+      <option value="gemini-2.5-pro">gemini-2.5-pro (more accurate, slower)</option>
+    </select>
+
+    <div>
+      <button id="save">Save</button>
+      <span id="saved"></span>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>
